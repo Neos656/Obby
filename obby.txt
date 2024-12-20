@@ -1,0 +1,22 @@
+
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local PhantomForcesWindow = Library:NewWindow("Combat")
+
+local KillingCheats = PhantomForcesWindow:NewSection("Kill Options")
+
+KillingCheats:CreateButton("Button", function()
+local positions = {
+    Vector3.new(184, 37, 276),
+    Vector3.new(183, 84, 199),
+    Vector3.new(184, 154, 266),
+    Vector3.new(172, 219, 199),
+    Vector3.new(184, 275, 264)
+}
+
+for _, pos in ipairs(positions) do
+    game.Players.LocalPlayer.Character:PivotTo(CFrame.new(pos))
+    wait(10)
+end
+print()
+end)
